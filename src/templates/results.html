@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Best Dish Finder - Results</title>
+</head>
+<body>
+    <h1>Restaurants Nearby</h1>
+    <ul>
+        {% for restaurant in restaurants %}
+            <li>{{ restaurant['name'] }} - Rating: {{ restaurant['rating'] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Go Back</a>
+</body>
+</html>
