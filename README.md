@@ -40,7 +40,7 @@ source venv/bin/activate
 cp src/config_template.py src/config.py
 
 ```
-- Open src/config.py and replace "your_google_api_key_here" with your actual Google API key.
+- Open src/config.py and replace with your actual Google API key.
 6. Run the application
 ```
 python src/app.py
