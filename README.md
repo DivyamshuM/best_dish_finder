@@ -19,6 +19,30 @@ This project aims to find the best dishes at restaurants in a given location usi
 1. Create a virtual environment.
 ```
 python -m venv venv
+
 ```
-3. Install dependencies with `pip install -r requirements.txt`.
-4. Set up API keys in `config.py`.
+2. Activate the virtual environment.
+- On Windows:
+```
+venv\Scripts\activate
+
+```
+- On macOS/Linux:
+```
+source venv/bin/activate
+
+```
+4. Install dependencies with `pip install -r requirements.txt`.
+
+5. Set up API keys in `config.py`.
+- Copy config_template.py to config.py:
+```
+cp src/config_template.py src/config.py
+
+```
+- Open src/config.py and replace "your_google_api_key_here" with your actual Google API key.
+6. Run the application
+```
+python src/app.py
+
+```
