@@ -2,14 +2,25 @@
 <html>
 <head>
     <title>Best Dish Finder - Results</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Restaurants Nearby</h1>
-    <ul>
-        {% for restaurant in restaurants %}
-            <li>{{ restaurant['name'] }} - Rating: {{ restaurant['rating'] }}</li>
-        {% endfor %}
-    </ul>
-    <a href="/">Go Back</a>
+    <div class="container">
+        <h1>Restaurants Nearby</h1>
+        {% if restaurants %}
+            <ul class="list-group">
+                {% for restaurant in restaurants %}
+                    <li class="list-group-item">
+                        <strong>{{ restaurant['name'] }}</strong> - Rating: {{ restaurant.get('rating', 'No rating available') }}<br>
+                        <strong>Best Dish:</strong> {{ restaurant.get('best_dish', 'No popular dish found') }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No restaurants found. Please try a different location or radius.</p>
+        {% endif %}
+        <a href="/" class="btn btn-primary mt-3">Go Back</a>
+    </div>
 </body>
 </html>
+
