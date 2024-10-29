@@ -17,7 +17,8 @@ This project aims to find the best dishes at restaurants in a given location usi
 
 ## Setup Instructions
 1. Create a virtual environment.
-''' python -m venv venv'''
-2. 
+```
+python -m venv venv
+```
 3. Install dependencies with `pip install -r requirements.txt`.
 4. Set up API keys in `config.py`.
